@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
@@ -67,12 +66,12 @@ class MapController extends Component {
         let recentplacesCopy  = [...this.state.recentplaces];
 
         let duplicate_place = recentplacesCopy.filter(function(place, index){ 
-            return place.place_id == placeObj.place_id
+            return place.place_id === placeObj.place_id
         });
 
         recentplacesCopy.push(placeObj);
 
-        if(duplicate_place.length == 0) {
+        if(duplicate_place.length === 0) {
             this.setState({
                 recentplaces : recentplacesCopy,
                 message: "Added a place",
@@ -92,7 +91,7 @@ class MapController extends Component {
         let recentplacesCopy  = [...this.state.recentplaces];
 
         let filteredPlaces = recentplacesCopy.filter(function(place, index){ 
-            return place.place_id != placeID
+            return place.place_id !== placeID
         });
 
         this.setState({
@@ -143,7 +142,7 @@ class MapController extends Component {
         }
 
 
-        if(this.state.message != "") {
+        if(this.state.message !== "") {
             message =(<Snackbar
             anchorOrigin={{
               vertical: 'bottom',

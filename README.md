@@ -19,6 +19,13 @@ PlaceDetail - It will display the important details of the particular selected p
 ## Miscellaneous
 A user cannot add a place which is already part of recent places list. 
 
+## How to Run
+Clone the project and unzip the files.
+Go to the project folder(package.json should be there in the current directory)
+Now run the command "npm install"
+Get API-DEV-KEY(https://developers.google.com/maps/documentation/javascript/get-api-key) 
+Create an .env file and add REACT_APP_API_DEV_KEY=YOUR_API_DEV_KEY
+You are ready to go. Run "npm start".
 
 ## Built With
 

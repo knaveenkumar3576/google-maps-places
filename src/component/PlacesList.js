@@ -8,6 +8,7 @@ const PlacesList  = (props) => {
     let placeItems =props.places.map(place => {
         return (
             <PlaceListItem
+                key={place.place_id}
                 name = {place.name}
                 icon = {place.icon}
                 address = {place.formatted_address}

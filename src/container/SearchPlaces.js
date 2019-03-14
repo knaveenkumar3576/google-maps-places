@@ -48,7 +48,7 @@ class SearchPlaces extends Component {
     return (
       <div>
         <SearchBar id="autocomplete" 
-          placeholder="Search" 
+          placeholder="Search Google Maps" 
           value={this.state.query} 
           className={this.props.classes.searchbar}
         />

@@ -10,6 +10,7 @@ const Map = (props) => {
     
         return (
             <Marker
+                key={place.place_id}
                 selected_place = {props.selected_place}
                 placeID={place.place_id} 
                 lat={place.geometry.location.lat()} 

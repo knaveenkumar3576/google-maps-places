@@ -1,8 +1,6 @@
 import React,{Component} from 'react'
 import { withStyles, createStyles } from '@material-ui/styles';
 
-
-import Wrap from './Wrap';
 import MapController from '../container/MapController';
 
 const styles = createStyles({

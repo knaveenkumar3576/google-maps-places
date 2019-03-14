@@ -6,20 +6,17 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import Wrap from '../HOC/Wrap';
 import missingImage from "../static/images/image_missing.png";
 
 const PlaceDetail  = (props) => {
     let imageURL=missingImage;
-    let rating='Unavailable';
     let contact_num='Unavailable';
     let address='Unavailable';
 
     let filteredPlaces = props.places.filter(function(place, index){ 
-        return place.place_id == props.selected_place
+        return place.place_id === props.selected_place
     });
 
     let selected_place_info = filteredPlaces[0];
@@ -27,10 +24,6 @@ const PlaceDetail  = (props) => {
     
     if("photos" in selected_place_info && selected_place_info.photos.length > 0) {
         imageURL = selected_place_info.photos[0].getUrl();
-    }
-
-    if("rating" in selected_place_info) {
-        rating = selected_place_info.rating;
     }
 
     if("formatted_address" in selected_place_info) {
