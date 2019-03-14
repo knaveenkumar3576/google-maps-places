@@ -39,7 +39,10 @@ class SearchPlaces extends Component {
     // Extract City From Address Object
     let placeObject = this.autocomplete.getPlace();
 
-    this.props.addPlacesHandler(placeObject);
+    if("place_id" in placeObject) {
+      this.props.addPlacesHandler(placeObject);
+    }
+
 
   }
 
