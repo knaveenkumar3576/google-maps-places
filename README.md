@@ -21,11 +21,20 @@ A user cannot add a place which is already part of recent places list.
 
 ## How to Run
 Clone the project and unzip the files.
-Go to the project folder(package.json should be there in the current directory)
-Now run the command "npm install"
-Get API-DEV-KEY(https://developers.google.com/maps/documentation/javascript/get-api-key) 
-Create an .env file and add REACT_APP_API_DEV_KEY=YOUR_API_DEV_KEY
+
+Go to the project folder(package.json should be there in the current directory).
+
+Now run the command "npm install".
+
+Get API-DEV-KEY(https://developers.google.com/maps/documentation/javascript/get-api-key).
+
+Create an .env file and add REACT_APP_API_DEV_KEY=YOUR_API_DEV_KEY.
+
+Enable the google API's 'Maps JavaScript API', 'Places API'(https://support.google.com/googleapi/answer/6158841)
+
 You are ready to go. Run "npm start".
+
+Go to http://localhost:3000/. The application should load the search bar and map centered with current location(Try refresh).
 
 ## Built With
 
