@@ -1,11 +1,13 @@
 import React from 'react';
 
-import MapMarker from '../../static/images/marker.svg';
+import GenericMarker from '../../static/images/generic_marker.svg';
+import CurrentMarker from '../../static/images/current_marker.svg';
 
 const Marker = (props) => {
+
     return (
         <div>
-            <img src={MapMarker}
+            <img src={props.placeID == props.selected_place ? CurrentMarker : GenericMarker}
                 height= "30rem"
                 width= "20rem"
                 alt="map marker"

@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Google Maps + Places
 
-## Available Scripts
+The Google Maps + Places application allows you to search places using Google Places API. The searched places are stored into 'Recent Places' list and marked in the map(default location marker). When you click an item into the 'Recent Places' list, a detail info of the selected place will be shown and also the location will be highlighted in the map with a pin symbol.
 
-In the project directory, you can run:
 
-### `npm start`
+## Main Components
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+MapController - The main component of the application with child components Map, SearchPlaces, RecentPlaces.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Map - This component will render a map along with markers that are passed to the component
 
-### `npm test`
+SearchPlaces - Provides an autocomplete to search for places using Google Places API and returns the information about the selected place.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+RecentPlaces - It will display the places searched by the user. This is a stateless component that takes the list from the MapController and then generates a list with event listeners to delete a place and also triggering the PlaceDetail view
 
-### `npm run build`
+PlaceDetail - It will display the important details of the particular selected place. This is again a stateless component that takes the info returned from places API and displays the information
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Miscellaneous
+A user cannot add a place which is already part of recent places list. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [React]https://reactjs.org/
+* google-map-react
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
